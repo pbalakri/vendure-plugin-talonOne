@@ -33,8 +33,10 @@ Download the folder and place it in the packages folder of your Vendure project 
 > Note: that 'your-points' is the same value that you will use when you create the payment method via the admin UI, so make sure they match.
 
 Ensure you have the following keys in your environment file with the appropriate values:
-TALON_ONE_URL='https://your-endpoint.europe-west1.talon.one'
-TALON_ONE_API_KEY='ApiKey-v1 123123123sadfasdf234213412341234'
+
+`TALON_ONE_URL='https://your-endpoint.europe-west1.talon.one'`
+
+`TALON_ONE_API_KEY='ApiKey-v1 123123123sadfasdf234213412341234'`
 
 ## High Level Flow
 
