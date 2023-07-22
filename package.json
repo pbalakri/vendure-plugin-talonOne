@@ -1,9 +1,9 @@
 {
-  "name": "vendure-plugin-template",
+  "name": "vendure-plugin-talon-one",
   "version": "1.0.0",
-  "description": "Plugin template",
+  "description": "Vendure Plaugin for Talon.One Loyalty Program Integration",
   "author": "Martijn van de Brug <martijn@pinelab.studio>",
-  "repository": "https://github.com/vendure-ecommerce/plugin-template",
+  "repository": "https://github.com/pbalakri/vendure-plugin-talonOne",
   "license": "MIT",
   "private": false,
   "engines": {
@@ -22,11 +22,8 @@
   },
   "devDependencies": {
     "@types/jest": "29.4.0",
-    "@vendure/admin-ui-plugin": "1.9.3",
-    "@vendure/asset-server-plugin": "1.9.3",
-    "@vendure/core": "1.9.3",
+    "@vendure/core": "2.0.3",
     "@vendure/testing": "1.9.3",
-    "@vendure/ui-devkit": "1.9.3",
     "jest": "29.4.3",
     "rimraf": "^4.1.2",
     "ts-jest": "29.0.5",
