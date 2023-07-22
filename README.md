@@ -65,14 +65,14 @@ When the order is placed, the Talon.One session is closed and the customer's poi
 The Customer response of activeCustomer query should now provide the loyalty points balances
 
 ```
-	query Customer {
-		activeCustomer {
-			loyaltyPoints {
+query Customer {
+	activeCustomer {
+		loyaltyPoints {
         		active
 		        pending
-    		}
 		}
 	}
+}
 ```
 
 #### addPaymentToOrder mutation
@@ -80,22 +80,22 @@ The Customer response of activeCustomer query should now provide the loyalty poi
 The addPaymentToOrder mutation should include the pointsToRedeem field in the metadata indicating the number of points that the customer wishes to redeem. When the customer attempts to redeem points, a TalonOne API call is made to ensure that the customer has enough points to cover the value of the pointsToRedeem field. The state of the payment is Authorized to allow the customer to cover the rest of the order with a different payment method.
 
 ```
-	mutation addPaymentToOrder {
-		addPaymentToOrder(
-			input: {
-				method : "amal-points",
-				metadata : {
-					pointsToRedeem: 10
-				}
-			}
-		)
-		{
-			__typename
-			...on OrderPaymentStateError {
-				 errorCode
-				 message
+mutation addPaymentToOrder {
+	addPaymentToOrder(
+		input: {
+			method : "amal-points",
+			metadata : {
+				pointsToRedeem: 10
 			}
 		}
+	)
+	{
+		__typename
+		...on OrderPaymentStateError {
+			 errorCode
+			 message
+		}
 	}
+}
 
 ```
